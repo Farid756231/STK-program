@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STK televestionkanalen</title>
+    <link rel="stylesheet" href="styls/file6.css">
+</head>
+<body>
+<header>
+  <h1> Välkommen Till statlig televisonskanalen STK </h1>
+</header>
+<main>
+ 
+  <form id="programForm"> 
+    <img src="media/f7b8514d3cd9b7aabe014aca40e2a916.jpeg" alt="STK"><br><br>
+   
+      <label for="title">Titel:</label>        <!--skapar en ruta för title-->
+      <input type="text" id="title" required>
+
+      <label for="Beskrivning">Beskrivning:</label>  <!---skapa en ruta för beskrivning-->
+      <textarea id="Beskrivning"  required></textarea>
+
+      <label for="old">Åldersgräns:</label>      <!--skapa en ruta för åldersgräns-->
+      <input type="number" id="old"  required>
+
+      <button type="button" onclick="addProgram()">Lägg till program</button>  <!--skapa knapp för att lägga till information från title,beskrivning och åldersgräns-->
+     <textarea  id="events" rows="10" cols="30" readonly ></textarea>
+
+      <input type="text" id="searchInput" placeholder="Sök efter program" oninput="searchPrograms()">  <!--ska ruta för att man kan söka efter programmet-->
+     
+      <input type="reset" value="Reset">  <!--skapa knapp för att radera vad vi har fyllt på förut-->
+    
+  </form> 
+
+  <div class="buttons-container">
+      <button type="button" onclick="saveData()">Spara data</button>  <!--skapa knapp för att spara data-->
+      <button type="button" onclick="displayData()">Visa data</button>  <!--skapa knapp för att visa data som blev sparat-->
+      <button type="button" onclick="clearStorage()">Rensa storage</button>  <!--skapa knapp för att rensa data i lokalstorage -->
+  </div>
+
+  <ul id="programList"></ul>
+  <footer><p>Copyright © 2023 Min Webbplats | Datum: <span id="currentDate"></span></p>  <!--skapa datum för sidan-->
+
+  </footer>
+</main>
+<script src="scripts/file6.js"></script>
+ </body>
+</html>
